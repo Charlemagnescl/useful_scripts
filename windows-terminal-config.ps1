@@ -17,7 +17,8 @@ scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/downl
 
 # install Meslo NF font
 scoop bucket add nerd-fonts
-scoop install nerd-fonts/Meslo-NF
+scoop install nerd-fonts/SourceCodePro-NF
+scoop install nerd-fonts/SourceCodePro-NF-Mono
 
 # Some other settings to be done mannually
 Write-Output "\033[0;32m [+] The Meslo-NF font is successfully install, but you still need to config it in the setting page of your windows terminal"
@@ -29,6 +30,11 @@ scoop install terminal-icons
 # install posh-git
 scoop bucket add extras
 scoop install posh-git
+
+# 
+scoop install colortool
+colortool -b OneHalfDark.itermcolors
+
 
 # config your powershell
 Write-Output "oh-my-posh init pwsh --config ~\scoop\apps\oh-my-posh\current\themes\material.omp.json | Invoke-Expression" >> $PROFILE
